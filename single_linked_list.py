@@ -14,6 +14,14 @@ class linked_list:
             current = current.next
         current.next = new_node
 
+    def display(self):
+        values = []
+        current = self.head
+        while(current.next != None):
+            current = current.next
+            values.append(current.data)
+        print(values)
+
     def length(self):
         length = 0
         current = self.head
@@ -22,13 +30,6 @@ class linked_list:
             current = current.next
         return length
 
-    def display(self):
-        values = []
-        current = self.head
-        while(current.next != None):
-            current = current.next
-            values.append(current.data)
-        print(values)
 
     def get(self, loc):
         if(loc > self.length()):
